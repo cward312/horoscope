@@ -1,0 +1,89 @@
+<html>
+<head>
+  <title>Horoscope</title>
+  <link rel = "stylesheet" href = "halloween.css">
+  <script>
+     function Horoscope()
+      {
+        var month = document.getElementById('data').value;
+        var day = document.getElementById('data2').value;
+        if (day > 31)
+      {
+        var msg = "invalid date";
+      }
+       else if ((month == 03 && day > 20) || (month == 04 && day <= 20))
+      {
+         var pic = "<img src = 'aries.jpg' height = '250px' width = '250px'>";
+         var msg = "Today, a wave of disappointment may take over you. You have it in you to deal with your problems.";
+      }
+       else if((month == 4 && day > 20) || (month == 5 && day <= 21))
+      {
+         var pic = "<img src = 'taurus.jpg' height = '200px' width = '250px'>";
+         var msg = "You like to remain positive, however all work and no play will take its toll on you.";
+      }
+        else if ((month == 5 && day > 21) || (month == 6 && day <= 21))
+      {
+         var pic = "<img src = 'gemini.png' height = '250px' width = '250px'>";
+         var msg = "You do not suffer from excess weight so enjoy your meals!";
+      }
+           else if ((month == 6 && day > 21) || (month == 7 && day <= 22))
+      {
+        var pic = "<img src = 'cancer.jpg' height = '250px' width = '250px'>";
+        var msg = "You will become aware of your self=worth today.";
+      }
+         else if ((month == 7 && day > 22) || (month == 8 && day <= 23))
+      {
+        var pic = "<img src = 'leo.jpg' height = '250px' width = '250px'>";
+        var msg = "You shouldn't get worked up about things. Life is about responsibilities and enjoyment.";
+      }
+          else if ((month == 8 && day > 23) || (month == 9 && day <= 22))
+      {
+        var pic = "<img src = 'virgo.jpg' height = '250px' width = '250px'>";
+        var msg = "You will feel energetic enough to practice patience with your family.";
+      }
+          else if ((month == 9 && day > 22) || (month == 10 && day <= 23))
+      {
+        var pic = "<img src = 'libra.jpg' height = '250px' width = '250px'>";
+        var msg = "There is no need for you to absorb the negativve energy coming from other people.";
+      }
+          else if ((month == 10 && day > 23) || (month == 11 && day <= 22))
+      {
+        var pic = "<img src = 'scorp.jpg' height = '250px' width = '250px'>";
+        var msg = "You will get in a fight with those closest to you today!";
+      }
+           else if ((month == 11 && day > 22) || (month == 12 && day <= 21))
+      {
+        var pic = "<img src = 'sag.png' height = '250px' width = '250px'>";
+        var msg = "You will be urged to change your daily routine.";
+      }
+           else if ((month == 12 && day > 21) || (month == 01 && day <= 20))
+      {
+        var pic = "<img src = 'cap.jpg' height = '250px' width = '250px'>";
+        var msg = "You have a practical mind and are generous while giving suggestions to others.";
+      }
+           else if ((month == 01 && day > 20) || (month == 02 && day <= 18))
+      {
+         var pic = "<img src = 'aqua.png' height = '250px' width = '250px'>";
+         var msg = "Today, someone will make your heart flutter.";
+      }
+         else if ((month == 02 && day > 18) || (month == 03 && day <= 20))
+      {
+         var pic = "<img src = 'pisces.jpg' height = '200px' width = '250px'>";
+         var msg = "You will get an opportunity to do something you love all day.";
+      }
+         document.getElementById('pic').innerHTML = pic;
+         document.getElementById('msg').innerHTML = msg;
+       }
+       </script>
+     </head>
+     <body>
+       <img src = "bck.png" height = "200px" width = "1350px">
+        <hr>
+        <br>
+        <br>
+        <input id = "data" type = "letter" value = "Please Enter Month">
+        <input id = "data2" type = "letter" value = "Please Enter Day">
+        <input type = "button" value = "Enter" onclick = "Horoscope()">
+         <br>
+         <br>
+        <span id = "pic"></span> <br> <span id = "msg"></span> </body> </html>
